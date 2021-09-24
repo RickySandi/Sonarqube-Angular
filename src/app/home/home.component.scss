@@ -1,34 +1,34 @@
-nav{  
-  background-color: #eeeeee;  
+nav {
+  background-color: #eeeeee;
 }
 nav ul li {
   float: right;
 }
 
-nav ul{
+nav ul {
   justify-content: right;
 }
-.OpcionMenu{
+.OpcionMenu {
   text-align: center;
   font-size: 15;
   text-transform: uppercase;
 }
-.OpcionMenu:hover{
+.OpcionMenu:hover {
   background: #007c61;
-  transition: .5s;
-  color:  #f8f8fd;
+  transition: 0.5s;
+  color: #f8f8fd;
   border-radius: 25px;
 }
-.OpcionMenu.active{
+.OpcionMenu.active {
   background: #007c61;
   border-radius: 25px;
-  color:  #f8f8fd;
+  color: #f8f8fd;
 }
-a{
+a {
   color: #007c61;
   text-align: center;
 }
-.Aplicacion{
+.Aplicacion {
   position: relative;
   margin-bottom: 15%;
 }
@@ -36,17 +36,17 @@ a{
   text-align: center;
   font-style: italic;
   font-weight: bolder;
-  font-size: 50px ;
+  font-size: 50px;
   color: #007c61;
 }
 
 .div-registro-grafico-green-right {
   width: 300px;
   height: 100px;
-  color:#EEEEEE;  
-  font-weight: bold; 
-  font-size:x-large; 
-  background: #007C61;
+  color: #eeeeee;
+  font-weight: bold;
+  font-size: x-large;
+  background: #007c61;
   padding-top: 30px;
   border-radius: 0px 0px 40px 40px;
 }
@@ -55,17 +55,17 @@ a{
   width: 300px;
   height: 300px;
   padding-top: 65px;
-  background: #EEEEEE;
+  background: #eeeeee;
   border-radius: 40px 40px 0px 0px;
 }
 
 .div-registro-grafico-green-left {
   width: 300px;
   height: 100px;
-  color:#EEEEEE;  
-  font-weight: bold; 
-  font-size:x-large; 
-  background: #007C61;
+  color: #eeeeee;
+  font-weight: bold;
+  font-size: x-large;
+  background: #007c61;
   padding-top: 30px;
   border-radius: 0px 0px 40px 40px;
 }
@@ -73,14 +73,14 @@ a{
   width: 300px;
   height: 300px;
   padding-top: 50px;
-  background: #EEEEEE;
+  background: #eeeeee;
 
   border-radius: 40px 40px 0px 0px;
 }
 
-.btn-registro{
+.btn-registro {
   border: none;
-  background:none;
+  background: none;
   outline: none;
   width: 300px;
   height: 400px;
@@ -88,16 +88,11 @@ a{
   border-radius: 40px;
   margin-top: 50px;
 }
-
-.div-buttons{
-  box-align: center;
-}
-.btn-left{
-  
+.btn-left {
   clear: right;
   margin-right: 150px;
 }
 
-.btn-right{
+.btn-right {
   margin-left: 150px;
 }

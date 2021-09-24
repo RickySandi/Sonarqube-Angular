@@ -125,11 +125,11 @@ export class DetallesEstudianteComponent implements OnInit {
     this.initDicDiagnosticos();
   }
   async eliminarEstudianteDeApoderado(estudiante: Estudiante) {
-    for (let index = 0; index < estudiante.apoderados.length; index++) {
-      var apoderado = await this.apoderadosService.get(this.estudiante.apoderados[index].id);
-      for (let index = 0; index < apoderado.estudiantes.length; index++) {
-        if (estudiante.id == apoderado.estudiantes[index].id) {
-          apoderado.estudiantes.splice(index, 1);
+    for (let indexApoderado = 0; indexApoderado < estudiante.apoderados.length; indexApoderado++) {
+      var apoderado = await this.apoderadosService.get(this.estudiante.apoderados[indexApoderado].id);
+      for (let indexEstudiante = 0; indexEstudiante < apoderado.estudiantes.length; indexEstudiante++) {
+        if (estudiante.id == apoderado.estudiantes[indexEstudiante].id) {
+          apoderado.estudiantes.splice(indexEstudiante, 1);
         }
       }
       await this.apoderadosService.guardarApoderado(apoderado, false);
