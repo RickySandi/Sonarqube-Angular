@@ -22,10 +22,6 @@ export class LoginComponent implements OnInit {
     public modalService: NgbModal,
   ) { }
 
-  async ngOnInit() {
-
-  }
-
   async login() {
     this.email = this.email.replace(/\s/g, '');
     await this.authenticationService.login(this.email, this.password);
