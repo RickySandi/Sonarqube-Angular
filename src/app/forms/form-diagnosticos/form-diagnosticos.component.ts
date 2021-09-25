@@ -11,7 +11,7 @@ import { Location } from "@angular/common";
 @Component({
   selector: "app-form-diagnosticos",
   templateUrl: "./form-diagnosticos.component.html",
-  styleUrls: ["./form-diagnosticos.component.scss"],
+  styleUrls: [],
 })
 export class FormDiagnosticosComponent implements OnInit {
   diagnostico: Diagnostico | any = new Diagnostico();
