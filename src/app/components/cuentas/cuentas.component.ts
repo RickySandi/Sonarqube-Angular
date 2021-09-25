@@ -27,6 +27,7 @@ export class CuentasComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    // This is intentional
   }
 
   async createAccount() {
