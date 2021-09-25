@@ -2,5 +2,5 @@ projectKey=Sonarqube-Angular
 serverUrl=http://localhost:9000
 serverVersion=9.0.1.46107
 dashboardUrl=http://localhost:9000/dashboard?id=Sonarqube-Angular
-ceTaskId=AXwVT_AB5LesegwJM1pG
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AXwVT_AB5LesegwJM1pG
+ceTaskId=AXwdAn2DkCbmI_tVfqcM
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXwdAn2DkCbmI_tVfqcM
