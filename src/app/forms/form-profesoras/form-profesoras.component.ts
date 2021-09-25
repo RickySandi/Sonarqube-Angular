@@ -78,7 +78,7 @@ export class FormProfesorasComponent implements OnInit {
     } 
     const esValido = this.validacion.nombres && this.validacion.apellidos && this.validacion.celular && this.validacion.telefono && this.validacion.correoElectronico;
     return esValido;
-  };  
+  }  
 
   async abrirModalExito(mensaje:string='') {
     const modalRef = this.modalService.open(SuccessModalComponent);

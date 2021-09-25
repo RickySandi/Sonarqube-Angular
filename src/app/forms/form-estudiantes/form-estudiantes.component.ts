@@ -142,7 +142,7 @@ export class FormEstudiantesComponent implements OnInit {
     const esValido = this.validacion.nombres && this.validacion.apellidos && this.validacion.numHistorico && this.validacion.numGestion && this.validacion.gestionRegistro
       && this.validacion.direccion && this.validacion.fecNacimiento && this.validacion.estado && this.validacion.diagnostico && this.validacion.fechaRegistro;
     return esValido;
-  };
+  }
   validarRegistro() {
 
     if (this.estudiante.estados.length != 0 && this.estudiante.diagnosticos.length != 0) {
@@ -205,7 +205,7 @@ export class FormEstudiantesComponent implements OnInit {
       if (!this.validacion.gestionRegistro) {
         this.validacion.fecNacimiento = false;
       }
-    };
+    }
   }
 
   async abrirModalExito(mensaje: string = '') {
