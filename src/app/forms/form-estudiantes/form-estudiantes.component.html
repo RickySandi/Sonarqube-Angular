@@ -59,12 +59,12 @@
           <input type="text" name="numeroHistorico" class="form-control rounded" size="4" id="numeroHistorico_id"
             [(ngModel)]="estudiante.numHistorico" (ngModelChange)="validarEstudiante() " value required>
         </div>
-        <p><b>/</b></p>
+        <p><strong>/</strong></p>
         <div class="col-md-2 inlineblock">
           <input type="text" name="numeroGestion" class="form-control rounded" size="4" id="numeroGestion_id"
             [(ngModel)]="estudiante.numGestion" (ngModelChange)="validarEstudiante()" value required>
         </div>
-        <p class="ml-2"><b>/</b></p>
+        <p class="ml-2"><strong>/</strong></p>
         <div class="col-md-2 inlineblock">
           <input type="text" name="gestionRegistro" class="form-control rounded" size="15" id="gestionRegistro_id"
             [(ngModel)]="estudiante.gestionRegistro" (ngModelChange)="cargarNumeroGestion()"
