@@ -1,45 +1,43 @@
-.container{
-    background-color: #ffffff;;
-    border-style: solid;
-    border-color: #007c61;
-    margin-top: 6px;
-    width: 600px;
+.container {
+  background-color: #ffffff;
+  border-style: solid;
+  border-color: #007c61;
+  margin-top: 6px;
+  width: 600px;
 }
-.buttons{
+.buttons {
   margin-bottom: 4px;
   margin-top: 4px;
 }
-  
-hr{
-    border-top: 2px solid #007c61;
+
+hr {
+  border-top: 2px solid #007c61;
 }
-.borde{
-    border:#007c61;
-  
+.borde {
+  border: #007c61;
 }
 .dot {
-    height: 25px;
-    width: 25px;
-    background-color: #007c61;
-    border-radius: 50%;
-    margin-left: 45px;
-    margin-top: -40px;
+  height: 25px;
+  width: 25px;
+  background-color: #007c61;
+  border-radius: 50%;
+  margin-left: 45px;
+  margin-top: -40px;
 }
 
-.topLeftText{
+.topLeftText {
   border-right: 2px solid #007c61;
 }
 
-h3{
+h3 {
   font-size: 1.4em;
-  
 }
 
-p{
+p {
   margin-bottom: 5px;
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   transform: scale(1.5);
 }
 
@@ -48,11 +46,11 @@ ul {
   padding: 0px;
   margin-left: 10px;
 }
-  
+
 ul li::before {
-  content: "\2022";  
-  color: #007c61; 
-  display: inline-block; 
+  content: "\2022";
+  color: #007c61;
+  display: inline-block;
   padding-right: 10px;
   font-size: 50px;
   line-height: 25px;

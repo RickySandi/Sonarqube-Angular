@@ -26,9 +26,6 @@ export class CuentasComponent implements OnInit {
 
   ) { }
 
-  ngOnInit(): void {
-  }
-
   async createAccount() {
     this.validPassword = this.password != "" && (/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/).test(this.password);
     this.email = this.email.replace(/\s/g, '');
