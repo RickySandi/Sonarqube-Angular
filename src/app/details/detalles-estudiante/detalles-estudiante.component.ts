@@ -10,7 +10,6 @@ import { EstadosService } from 'src/app/services/estados.service';
 import { DiagnosticosService } from 'src/app/services/diagnosticos.service';
 import { Estado } from 'src/app/models/estado.model';
 import { Diagnostico } from 'src/app/models/diagnostico.model';
-import { FormEstudiantesComponent } from 'src/app/forms/form-estudiantes/form-estudiantes.component'
 import { Location } from '@angular/common';
 import { Apoderado } from 'src/app/models/apoderado.model';
 import * as moment from 'moment';

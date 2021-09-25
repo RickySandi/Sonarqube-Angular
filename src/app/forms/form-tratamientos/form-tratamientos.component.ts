@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import "firebase/firestore";
 import { TratamientosService } from '../../services/tratamientos.service';
 import { Tratamiento } from 'src/app/models/tratamiento.model';
