@@ -13,7 +13,7 @@ export class SesionesService {
   async obtenerSesiones() {
     const db = firebase.firestore();
 
-    return await db.collection("sesiones").get().then(function (querySnapshot) {
+    return  db.collection("sesiones").get().then(function (querySnapshot) {
       const sesiones: any = [];
       querySnapshot.forEach(function (doc) {
         sesiones.push(doc.data());
@@ -70,7 +70,7 @@ export class SesionesService {
         }
       }
     }
-    return await listaFechas
+    return listaFechas
   }
   async obtenerListaFechasGlobal() {
     var listaFechas: any = [];
@@ -86,7 +86,7 @@ export class SesionesService {
         }
       }
     }
-    return await listaFechas
+    return listaFechas
   }
   async listadoFiltradoAñosGlobales() {
     let aniosTotales = await this.obtenerListaFechasGlobal();

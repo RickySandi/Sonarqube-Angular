@@ -13,7 +13,7 @@ export class ApoderadosService {
   async obtenerApoderados() {
     const db = firebase.firestore();
 
-    return await db.collection("apoderados").get().then(function (querySnapshot) {
+    return db.collection("apoderados").get().then(function (querySnapshot) {
       const apoderados:any = [];
       querySnapshot.forEach(function (doc) {
         apoderados.push(doc.data());
