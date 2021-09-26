@@ -32,119 +32,113 @@ h3 {
   border-color: #007c61;
 }
 
-.container{
-  background-color:#ffffff;
+.container {
+  background-color: #ffffff;
   border-radius: 10px;
-  padding-right: 0%;  
+  padding-right: 0%;
   padding-left: 0%;
   padding-bottom: 20%;
   border: #000000;
 }
 
-.form-row{
+.form-row {
   margin-left: 20px;
   margin-right: 20px;
 }
 
-h1,.form-estudiantes-text-left{
+h1,
+.form-estudiantes-text-left {
   font-size: 17px;
   text-transform: uppercase;
   color: #383a39;
 }
 
-.btn-redondo{
+.btn-redondo {
   border-radius: 50%;
 }
 
-.btn-outline-danger{
-  outline-color: #D60404;
+.btn-outline-danger {
+  outline-color: #d60404;
 }
 
-.btn-outline-green{
+.btn-outline-green {
   border-radius: 50%;
-  position:relative; 
-  left:50%;
-  margin-top: 5px;
-  color: #007c61;
-  border-color: #007c61
-}
-
-.btn-add-diagnostico{
-  border-radius: 50%;
-  position:relative; 
-  left:28%;
+  position: relative;
+  left: 50%;
   margin-top: 5px;
   color: #007c61;
   border-color: #007c61;
 }
 
-.btn-add-diagnostico:hover, .btn-outline-green:hover{
+.btn-add-diagnostico {
+  border-radius: 50%;
+  position: relative;
+  left: 28%;
+  margin-top: 5px;
+  color: #007c61;
+  border-color: #007c61;
+}
+
+.btn-add-diagnostico:hover,
+.btn-outline-green:hover {
   background-color: #007c61;
   color: white;
 }
 
-.btn-cancel{
-  background-color: #D60404;
-  color: white;
-  margin-left: 20px;
-}
-
-.btn-confirm{
-  background-color: #007c61;
-  color: white;
-}
-
-.center-image{
+.center-image {
   display: flex;
   justify-content: center;
 }
 
-.div-estado{
+.div-estado {
   height: 80px;
 }
 
-.inlineblock{
+.inlineblock {
   display: inline-block;
 }
 
-.form-row, .row{
-  margin: 0px
+.form-row,
+.row {
+  margin: 0px;
 }
 
-#fechaDeNacimiento_id{
+#fechaDeNacimiento_id {
   height: 38px;
   width: 100%;
 }
 
-.input-fecha{
+.input-fecha {
   height: 38px;
   width: 100%;
-  margin-left:0px;
+  margin-left: 0px;
 }
 
-.byside{
-  float:left;
+.byside {
+  float: left;
   margin: 1%;
   margin-left: 50px;
 }
 
-.btn-cancel{
-  background-color: #D60404;
+.btn-cancel {
+  background-color: #d60404;
   color: white;
   margin-left: 20px;
 }
 
-.btn-confirm{
+.btn-confirm {
   background-color: #007c61;
   color: white;
 }
 
-.col1{
+.col1 {
   padding-left: 0px;
   width: 20%;
 }
 
-.col2, .col3 , .col4{
+.col2,
+.col3,
+.col4 {
   padding-left: 0px;
   width: 29%;
 }
@@ -153,29 +147,27 @@ h1,.form-estudiantes-text-left{
   padding-left: 0px;
   text-align: center;
   width: 17%;
-
 }
 
-.col6{
+.col6 {
   text-align: center;
   padding-left: 0px;
   width: 3%;
 }
 
-
-.btn-eliminar-registro{
+.btn-eliminar-registro {
   border-radius: 50%;
   background-color: transparent;
-  color: #D60404;
-  border:1px solid #D60404;
+  color: #d60404;
+  border: 1px solid #d60404;
 }
 
-.btn-eliminar-registro:hover{
-  background-color: #D60404;
-  color:whitesmoke;
+.btn-eliminar-registro:hover {
+  background-color: #d60404;
+  color: whitesmoke;
 }
 
-.last-row{
+.last-row {
   padding-left: 0px;
   width: 100%;
 }
