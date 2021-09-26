@@ -8,7 +8,9 @@ import { Tratamiento } from '../models/tratamiento.model';
 })
 export class TratamientosService {
 
-  constructor() { }
+  constructor() { 
+    //Contructor vacio
+  }
   async obtenerTratamientos() {
     const db = firebase.firestore();
 

@@ -8,7 +8,9 @@ import { Estado } from '../models/estado.model';
 })
 export class EstadosService {
 
-  constructor() { }
+  constructor() { 
+    //Contructor vacio
+  }
 
   async obtenerEstados() {
     const db = firebase.firestore();

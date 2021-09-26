@@ -7,7 +7,9 @@ import "firebase/firestore";
 })
 export class UsuariosService {
 
-  constructor() { }
+  constructor() {
+    //Contructor vacio
+   }
 
   usuario: any = {
     id:"",

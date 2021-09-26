@@ -8,7 +8,9 @@ import { Apoderado } from '../models/apoderado.model';
 })
 export class ApoderadosService {
 
-  constructor() { }
+  constructor() { 
+    //Contructor vacio
+  }
 
   async obtenerApoderados() {
     const db = firebase.firestore();
