@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Apoderado } from 'src/app/models/apoderado.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Router } from '@angular/router';
 import { DeleteModalComponent } from './../../shared/delete-modal/delete-modal.component';
 import { EstudiantesService } from '../../services/estudiantes.service';
 import { ApoderadosService } from 'src/app/services/apoderados.service';

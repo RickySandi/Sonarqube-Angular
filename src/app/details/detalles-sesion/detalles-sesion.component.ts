@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Router } from '@angular/router';
 import { Sesion } from 'src/app/models/sesion.model';
 import { SesionesService } from 'src/app/services/sesiones.service';
-import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { DeleteModalComponent } from './../../shared/delete-modal/delete-modal.component';
 import { Location } from '@angular/common';
