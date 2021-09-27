@@ -186,9 +186,9 @@ export class FormEstudiantesComponent implements OnInit {
             this.validacion.estado = true;
             this.validacion.diagnostico = true;
           } else {
-            this.validacion.estado = true && this.validacion.estado;
-            this.validacion.diagnostico = true && this.validacion.diagnostico;
-          }
+            this.validacion.estado =  false;
+            this.validacion.diagnostico = false;
+          } 
           this.validacion.fechaRegistro = this.estudiante.estados.every(
             (estado: any) =>
               moment(estado.fecha).format("YYYY") >=
