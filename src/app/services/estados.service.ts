@@ -14,7 +14,7 @@ export class EstadosService {
 
   async obtenerEstados() {
     const db = firebase.firestore();
-    return await db.collection("estados").get().then(function (querySnapshot) {
+    return db.collection("estados").get().then(function (querySnapshot) {
       const estados: any = [];
       querySnapshot.forEach(function (doc) {
         estados.push(doc.data());

@@ -13,7 +13,7 @@ export class ProfesorasService {
   }
   async obtenerProfesoras() {
     const db = firebase.firestore();
-    return await db.collection("profesoras").get().then(function (querySnapshot) {
+    return db.collection("profesoras").get().then(function (querySnapshot) {
       const profesoras: any = [];
       querySnapshot.forEach(function (doc) {
         profesoras.push(doc.data());

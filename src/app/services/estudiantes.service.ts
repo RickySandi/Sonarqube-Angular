@@ -15,7 +15,7 @@ export class EstudiantesService {
   async obtenerEstudiantes() {
     const db = firebase.firestore();
 
-    return await db.collection("estudiantes").get().then(function (querySnapshot) {
+    return db.collection("estudiantes").get().then(function (querySnapshot) {
       const estudiantes: any = [];
       querySnapshot.forEach(function (doc) {
         estudiantes.push(doc.data());

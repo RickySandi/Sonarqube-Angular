@@ -11,7 +11,7 @@ export class DiagnosticosService {
   constructor() { }
   async obtenerDiagnosticos() {
     const db = firebase.firestore();
-    return await db.collection("diagnosticos").get().then(function (querySnapshot) {
+    return db.collection("diagnosticos").get().then(function (querySnapshot) {
       const diagnosticos:any = [];
       querySnapshot.forEach(function (doc) {
         diagnosticos.push(doc.data());
