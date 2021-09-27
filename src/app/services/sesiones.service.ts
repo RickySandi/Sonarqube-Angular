@@ -8,7 +8,9 @@ import { Sesion } from '../models/sesion.model';
 })
 export class SesionesService {
 
-  constructor() { }
+  constructor() { 
+    //Contructor vacio
+  }
 
   async obtenerSesiones() {
     const db = firebase.firestore();

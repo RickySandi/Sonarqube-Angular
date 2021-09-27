@@ -21,5 +21,7 @@ export class FiltrosService {
     telefono: '',
   };
 
-  constructor() { }
+  constructor() {
+    //Contructor vacio
+   }
 }

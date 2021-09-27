@@ -10,9 +10,9 @@ export class HomeComponent implements OnInit {
  
   contador :any; 
 
-  constructor(
-  
-  ) { }
+  constructor() { 
+    //Contructor vacio
+  }
 
  async ngOnInit(){
 

@@ -8,7 +8,9 @@ import { Estudiante } from '../models/estudiante.model';
   providedIn: 'root'
 })
 export class EstudiantesService {
-  constructor() { }
+  constructor() {
+    //Contructor vacio
+   }
 
   async obtenerEstudiantes() {
     const db = firebase.firestore();

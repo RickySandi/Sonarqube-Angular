@@ -8,7 +8,9 @@ import { Profesora } from '../models/profesora.model';
 })
 export class ProfesorasService {
 
-  constructor() { }
+  constructor() { 
+    //Contructor vacio
+  }
   async obtenerProfesoras() {
     const db = firebase.firestore();
     return await db.collection("profesoras").get().then(function (querySnapshot) {
