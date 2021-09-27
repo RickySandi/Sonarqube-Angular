@@ -1,8 +1,5 @@
-import { EventEmitter } from "@angular/core";
-import { Output } from "@angular/core";
-import { Component, OnInit } from "@angular/core";
-import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
-import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
+import { EventEmitter, Output, Component, OnInit } from "@angular/core";
+import { NgbActiveModal, NgbModal } from "@ng-bootstrap/ng-bootstrap";
 import { UsuariosService } from "../../services/usuarios.service";
 import { Observable, from } from "rxjs";
 import "rxjs/add/observable/fromPromise";
