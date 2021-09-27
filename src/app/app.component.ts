@@ -23,10 +23,10 @@ export class AppComponent {
 
 
   async ngOnInit() {
-    let logged;
+
     await this.initFirebase();
     await this.authenticationService.initializeListener();
-    logged = this.authenticationService.isLoggedIn();
+    await this.authenticationService.isLoggedIn();
 
   }
 

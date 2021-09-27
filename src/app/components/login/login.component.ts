@@ -38,6 +38,6 @@ export class LoginComponent implements OnInit {
   }
 
   abrirModalCambioClave() {
-    const modalRef = this.modalService.open(ResetPasswordModalComponent);
+    this.modalService.open(ResetPasswordModalComponent);
   }
 }
