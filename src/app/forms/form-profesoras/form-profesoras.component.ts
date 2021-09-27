@@ -87,13 +87,13 @@ export class FormProfesorasComponent implements OnInit {
         );
       }
     }
-    const esValido =
+    return (
       this.validacion.nombres &&
       this.validacion.apellidos &&
       this.validacion.celular &&
       this.validacion.telefono &&
-      this.validacion.correoElectronico;
-    return esValido;
+      this.validacion.correoElectronico
+    );
   }
 
   async abrirModalExito(mensaje: string = "") {

@@ -104,15 +104,14 @@ export class FormSesionesComponent implements OnInit {
         (asistencia: any) => asistencia.hora != ""
       );
     }
-    const esValido =
+    return (
       this.validacion.costoPorSesion &&
       this.validacion.tipoDePago &&
       this.actualizarCuotasAsistenciasSegunTipo(mostrarError, false) &&
       this.validarParteMedia(mostrarError) &&
       this.validacion.fecha &&
-      this.validacion.hora;
-
-    return esValido;
+      this.validacion.hora
+    );
   }
 
   validarParteMedia(mostrarError = false): boolean {
@@ -122,11 +121,11 @@ export class FormSesionesComponent implements OnInit {
     this.validacion.profesora = this.sesion.profesora.nombres != "";
     this.validacion.estudiante = this.sesion.estudiante.id != "";
     this.validacion.tratamiento = this.sesion.tratamiento.id != "";
-    const esValido =
+    return (
       this.validacion.profesora &&
       this.validacion.estudiante &&
-      this.validacion.tratamiento;
-    return esValido;
+      this.validacion.tratamiento
+    );
   }
 
   async abrirModalExito(mensaje: string = "") {

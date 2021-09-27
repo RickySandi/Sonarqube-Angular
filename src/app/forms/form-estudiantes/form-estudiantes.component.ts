@@ -157,7 +157,7 @@ export class FormEstudiantesComponent implements OnInit {
       /^[A-zÀ-ú0-9#°,. ]+$/.test(this.estudiante.direccion);
     this.validarRegistro();
 
-    const esValido =
+    return (
       this.validacion.nombres &&
       this.validacion.apellidos &&
       this.validacion.numHistorico &&
@@ -167,8 +167,8 @@ export class FormEstudiantesComponent implements OnInit {
       this.validacion.fecNacimiento &&
       this.validacion.estado &&
       this.validacion.diagnostico &&
-      this.validacion.fechaRegistro;
-    return esValido;
+      this.validacion.fechaRegistro
+    );
   }
   validarRegistro() {
     if (
