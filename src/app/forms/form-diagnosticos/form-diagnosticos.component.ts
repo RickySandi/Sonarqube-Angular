@@ -54,8 +54,7 @@ export class FormDiagnosticosComponent implements OnInit {
     this.validacion.diagnostico =
       this.diagnostico.diagnostico != "" &&
       /^[A-zÀ-ú -.]+$/.test(this.diagnostico.diagnostico);
-    const esValido = this.validacion.codigoColor && this.validacion.diagnostico;
-    return esValido;
+    return this.validacion.codigoColor && this.validacion.diagnostico;
   }
 
   async abrirModalExito(mensaje: string = "") {

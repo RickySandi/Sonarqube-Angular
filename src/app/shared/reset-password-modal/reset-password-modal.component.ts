@@ -1,45 +1,36 @@
-import { EventEmitter,Output,Component, OnInit } from '@angular/core';
-import { NgbActiveModal,NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { UsuariosService } from '../../services/usuarios.service'
-import { Observable, from } from 'rxjs';
-import 'rxjs/add/observable/fromPromise';
-import firebase from 'firebase/app';
+import { EventEmitter, Output, Component, OnInit } from "@angular/core";
+import { NgbActiveModal, NgbModal } from "@ng-bootstrap/ng-bootstrap";
+import { UsuariosService } from "../../services/usuarios.service";
+import { Observable, from } from "rxjs";
+import "rxjs/add/observable/fromPromise";
+import firebase from "firebase/app";
 import "firebase/firestore";
-import { ResetPasswordSuccessModalComponent } from '../reset-password-success-modal/reset-password-success-modal.component'
-
-
+import { ResetPasswordSuccessModalComponent } from "../reset-password-success-modal/reset-password-success-modal.component";
 
 @Component({
-  selector: 'app-reset-password-modal',
-  templateUrl: './reset-password-modal.component.html',
-  styleUrls: ['./reset-password-modal.component.scss']
+  selector: "app-reset-password-modal",
+  templateUrl: "./reset-password-modal.component.html",
+  styleUrls: ["./reset-password-modal.component.scss"],
 })
 export class ResetPasswordModalComponent implements OnInit {
-
   @Output() delete: EventEmitter<boolean> = new EventEmitter();
 
-
-  email = '';
+  email = "";
   usuarios: any = [];
 
   validacion = {
     correoValido: false,
     usuarioVerificado: false,
-    mostrarError: false
-  }
+    mostrarError: false,
+  };
   constructor(
-
     private activeModal: NgbActiveModal,
     public modalService: NgbModal,
     public usuariosService: UsuariosService
-
-  ) { }
-
+  ) {}
 
   async ngOnInit() {
-    await Promise.all([
-      this.obtenerUsuarios()
-    ])
+    await Promise.all([this.obtenerUsuarios()]);
   }
 
   async confirmar() {
@@ -52,28 +43,21 @@ export class ResetPasswordModalComponent implements OnInit {
   }
 
   validarCorreo() {
-
     if (this.validacion.correoValido) {
-
       this.confirmar();
     }
     if (this.email.length === 0) {
-      return true
-    }
-    else
-      return this.validacion.correoValido;
-
+      return true;
+    } else return this.validacion.correoValido;
   }
   verificarUsuario() {
     let verificado = false;
     this.usuarios.forEach((usuario: any) => {
       if (usuario.email == this.email) {
         verificado = true;
-
       }
     });
     return verificado;
-
   }
   async obtenerUsuarios() {
     this.usuarios = await this.usuariosService.obtenerUsuarios();
@@ -82,23 +66,23 @@ export class ResetPasswordModalComponent implements OnInit {
     if (mostrarError) {
       this.validacion.mostrarError = true;
     }
-    this.email = this.email.replace(/\s/g, '');
-    this.validacion.correoValido = this.email != "" && (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i).test(this.email);
+    this.email = this.email.replace(/\s/g, "");
+    this.validacion.correoValido =
+      this.email != "" &&
+      /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(
+        this.email
+      );
     this.validacion.usuarioVerificado = this.verificarUsuario();
 
-
-    const esValido = this.validacion.correoValido && this.validacion.usuarioVerificado;
-    return esValido;
-
+    return this.validacion.correoValido && this.validacion.usuarioVerificado;
   }
   async delay(ms: number) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+    return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
   async enviar() {
     if (this.validarUsuario(true)) {
-
-      await this.delay(1000)
+      await this.delay(1000);
       this.enviarCorreoRestablecimiento();
       this.activeModal.close();
       this.abrirModalMensajeEnviado();
@@ -106,7 +90,9 @@ export class ResetPasswordModalComponent implements OnInit {
   }
 
   enviarCorreoRestablecimiento(): Observable<void> {
-    var observableFromPromise = from(firebase.auth().sendPasswordResetEmail(this.email));
+    var observableFromPromise = from(
+      firebase.auth().sendPasswordResetEmail(this.email)
+    );
     return observableFromPromise;
   }
   abrirModalMensajeEnviado() {
@@ -117,4 +103,3 @@ export class ResetPasswordModalComponent implements OnInit {
     return this.email;
   }
 }
-

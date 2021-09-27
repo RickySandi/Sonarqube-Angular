@@ -157,7 +157,7 @@ export class FormEstudiantesComponent implements OnInit {
       /^[A-zÀ-ú0-9#°,. ]+$/.test(this.estudiante.direccion);
     this.validarRegistro();
 
-    const esValido =
+    return (
       this.validacion.nombres &&
       this.validacion.apellidos &&
       this.validacion.numHistorico &&
@@ -167,8 +167,8 @@ export class FormEstudiantesComponent implements OnInit {
       this.validacion.fecNacimiento &&
       this.validacion.estado &&
       this.validacion.diagnostico &&
-      this.validacion.fechaRegistro;
-    return esValido;
+      this.validacion.fechaRegistro
+    );
   }
   validarRegistro() {
     if (
@@ -186,9 +186,9 @@ export class FormEstudiantesComponent implements OnInit {
             this.validacion.estado = true;
             this.validacion.diagnostico = true;
           } else {
-            this.validacion.estado = true && this.validacion.estado;
-            this.validacion.diagnostico = true && this.validacion.diagnostico;
-          }
+            this.validacion.estado =  false;
+            this.validacion.diagnostico = false;
+          } 
           this.validacion.fechaRegistro = this.estudiante.estados.every(
             (estado: any) =>
               moment(estado.fecha).format("YYYY") >=
